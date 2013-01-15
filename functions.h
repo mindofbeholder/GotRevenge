@@ -10,6 +10,7 @@
 #include <cstdlib>
 using namespace std;
 
+extern int iSPEED;
 
 void pause();
 void clear();
@@ -23,3 +24,5 @@ int GetBufferWidth();
 string printWrap(std::string s);
 void slowPrint(string hello);
 void print(string text);
+void gameOver();
+void fin();

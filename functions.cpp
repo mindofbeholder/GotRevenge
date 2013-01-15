@@ -107,7 +107,7 @@ void slowPrint(string hello){
 	while ( hello[x] != '\0')
 	{
 		cout << hello[x];
-		Sleep(20);
+		Sleep(iSPEED);
 		x++;
 	};
 }
@@ -236,4 +236,38 @@ void credits(){
 	cout<<"                         ._|                     ._|      ";
 	cout << endl;
 	cout << endl;
+}
+
+void gameOver(){
+	cout <<" _____                        _____";
+	cout << endl;
+	cout <<"|  __ \\                      |  _  |";
+	cout << endl;
+	cout <<"| |  \\/ __ _ _ __ ___   ___  | | | |_   _____ _ __";
+	cout << endl;
+	cout <<"| | __ / _` | '_ ` _ \\ / _ \\ | | | \\ \\ / / _ \\ '__|";
+	cout << endl;
+	cout <<"| |_\\ \\ (_| | | | | | |  __/ \\ \\_/ /\\ V /  __/ |";
+	cout << endl;
+	cout <<" \\____/\\__,_|_| |_| |_|\\___|  \\___/  \\_/ \\___|_|";
+	cout << endl;
+	cout << endl;
+
+}
+
+void fin(){
+	cout <<"______ _";
+	cout << endl;
+	cout <<"|  ___(_)";
+	cout << endl;
+	cout <<"| |_   _ _ __";
+	cout << endl;
+	cout <<"|  _| | | '_ \\";
+	cout << endl;
+	cout <<"| |   | | | | |";
+	cout << endl;
+	cout <<"\\_|   |_|_| |_|";
+	cout << endl;
+	cout << endl;
+
 }
