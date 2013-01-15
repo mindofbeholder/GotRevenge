@@ -5,12 +5,6 @@
  *      Author: Tech Wizards
  */
 
-#include <iostream>
-#include <cstdlib>
-#include <iomanip>
-#include <windows.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include "functions.h"
 using namespace std;
 

@@ -5,24 +5,34 @@
  *      Author: Mindofbeholder & Bollinger
  */
 
-
 #include <iostream>
 #include <cstdlib>
+#include <iomanip>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string>
+#include <windows.h> // for resizing the window
+#include <time.h>
+#include <string.h>
+#include <ctype.h>
+#include <sstream>
+#include <vector>
+
 using namespace std;
 
-extern int iSPEED;
+extern int iSPEED; // used to set speed for the text crawl
 
-void pause();
-void clear();
-int twoChoice(string descript, string opOne, string opTwo);
-void noEffect(string descript, string opOne, string opTwo, string answerOne, string answerTwo);
-void resize (int Width, int Height);
-void title();
-void credits();
-int randomNum();
-int GetBufferWidth();
-string printWrap(std::string s);
-void slowPrint(string hello);
-void print(string text);
-void gameOver();
-void fin();
+void pause(); // creates in-game pause
+void clear(); // clears console screen
+int twoChoice(string descript, string opOne, string opTwo); // used for giving players choices
+void noEffect(string descript, string opOne, string opTwo, string answerOne, string answerTwo); // used for choices that have no effects
+void resize (int Width, int Height); // used for resizing the game window
+void title(); // prints the title
+void credits(); // prints developer credits
+int randomNum(); // generates a random number
+string printWrap(std::string s); // word wrap
+int GetBufferWidth(); // used to find the width of the window for printWrap
+void slowPrint(string hello); // slowly prints the words on screen character by character
+void print(string text); // feeds text through printWrap then slowPrint
+void gameOver(); // prints Game Over
+void fin(); // prints Fin

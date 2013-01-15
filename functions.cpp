@@ -4,19 +4,7 @@
  *  Created on: Jan 14, 2013
  *      Author: Mindofbeholder & xBollinger
  */
-
-#include <iostream>
-#include <cstdlib>
-#include <string>
-#include <windows.h> // for resizing the window
-#include <time.h>
-#include <string.h>
-#include <ctype.h>
 #include "functions.h"
-#include <iostream>
-#include <sstream>
-#include <string>
-#include <vector>
 using namespace std;
 
 /*****************************
@@ -98,9 +86,19 @@ void noEffect(string descript, string opOne, string opTwo, string answerOne, str
 
 }
 
+/**********************************************
+ * Cleans up the code in the main. Feeds text *
+ * into wordWrap then slowPrint then prints   *
+ **********************************************/
+
 void print(string text){
 	slowPrint(printWrap(text));
 }
+
+/**********************************************
+ * Slowly prints text character by character. *
+ * Speed adjusted by global variable iSPEED.  *
+ **********************************************/
 
 void slowPrint(string hello){
 	int x=0;
@@ -111,6 +109,10 @@ void slowPrint(string hello){
 		x++;
 	};
 }
+
+/****************************************
+ * Wraps text inside the console window *
+ ****************************************/
 
 string printWrap(std::string s)
 {
@@ -153,6 +155,10 @@ string printWrap(std::string s)
 	return s;
 }
 
+/************************************************************
+ * Gets console width automatically. Necessary for wordWrap *
+ ************************************************************/
+
 int GetBufferWidth()
 {
 	CONSOLE_SCREEN_BUFFER_INFO bufferInfo;
@@ -189,9 +195,9 @@ void resize(int Width, int Height)
     SetConsoleWindowInfo(Handle, TRUE, &Rect);            // Set Window Size
     }
 
-	/***********************
-	 * Displays "GotRevenge?" *
-	 ***********************/
+/**************************
+ * Displays "GotRevenge?" *
+ **************************/
 
 void title(){
 cout<<" _____       _    ______                               ___  ";
@@ -238,6 +244,10 @@ void credits(){
 	cout << endl;
 }
 
+/********************
+ * Prints Game Over *
+ ********************/
+
 void gameOver(){
 	cout <<" _____                        _____";
 	cout << endl;
@@ -254,6 +264,10 @@ void gameOver(){
 	cout << endl;
 
 }
+
+/**************
+ * Prints Fin *
+ **************/
 
 void fin(){
 	cout <<"______ _";
